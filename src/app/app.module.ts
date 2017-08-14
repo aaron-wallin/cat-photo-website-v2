@@ -8,13 +8,17 @@ import { AppComponent } from './app.component';
 import {NavComponent} from './navigation/nav.component';
 import {HeaderComponent} from './header/header.component';
 import {PortfolioComponent} from './portfolio/portfolio.component';
+import {PortfolioMainComponent} from './portfolio/portfolio-main.component';
+import {PortfolioDetailComponent} from './portfolio/portfolio-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavComponent,
     HeaderComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    PortfolioMainComponent,
+    PortfolioDetailComponent
   ],
   imports: [
     BrowserModule,

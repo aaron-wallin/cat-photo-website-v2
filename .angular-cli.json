@@ -21,7 +21,21 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "./assets/js/jquery-1.11.1.min.js",    
+        "./assets/js/jquery-1.11.0.js",    
+        "./assets/js/bootstrap.js",
+        "./assets/js/wow.min.js",
+        "./assets/js/SmoothScroll.js",
+        "./assets/js/jquery.easing.min.js",
+        "./assets/js/cbpAnimatedHeader.js",
+        "./assets/js/classie.js",
+        "./assets/js/skrollr.js",
+        "./assets/js/imagesloaded.js",
+        "./assets/js/jqBootstrapValidation.js",
+        "./assets/js/contact.js",
+        "./assets/js/main.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
