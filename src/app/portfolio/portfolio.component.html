@@ -1,8 +1,5 @@
-<!-- Portfolio Section
-    ================================================== -->
-<section  id="portfolio" class="grid">
-    <app-portfolio-main *ngFor='let p of portfolioList' [portfolio]='p'></app-portfolio-main>    
+<section id="portfolio" class="grid">
+    <app-portfolio-main *ngFor='let p of portfolioList' [portfolio]='p'></app-portfolio-main>
 </section>
 
 <app-portfolio-detail *ngFor='let p of portfolioList' [portfolio]='p'></app-portfolio-detail>
-
