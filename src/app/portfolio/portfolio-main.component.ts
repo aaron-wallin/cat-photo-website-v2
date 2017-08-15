@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio-main',
@@ -6,6 +6,5 @@ import { Component } from '@angular/core';
 })
 
 export class PortfolioMainComponent {
-    portfolioHrefName = '';
-    portfolioImagePath = '';
+    @Input() portfolio: any = {};
 }
