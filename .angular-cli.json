@@ -27,8 +27,9 @@
         "./assets/js/bootstrap.js",
         "./assets/js/wow.min.js",
         "./assets/js/jquery.easing.min.js",
-        
+        "./assets/js/masonry.min.js",
         "./assets/plugins/vegas/vegas.min.js",
+        "./assets/plugins/lightbox/js/lightbox.js",
         "./assets/js/main.js"        
       ],
       "environmentSource": "environments/environment.ts",

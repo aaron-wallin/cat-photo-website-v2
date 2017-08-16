@@ -15,6 +15,14 @@ function main() {
       $('#status').fadeOut(); // will first fade out the loading animation
       $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
       $('body').delay(350).css({ 'overflow': 'visible' });
+
+      var msnry = $('.gallery-grid').masonry({
+        // set itemSelector so .grid-sizer is not used in layout
+        itemSelector: '.gallery-item',
+        // use element for option
+        columnWidth: '.grid-sizer',
+        percentPosition: true
+      });
     });
     //]]>
 
@@ -23,6 +31,21 @@ function main() {
       $("#show").click(function () {
         $("#contact").slideToggle("slow,swing");
       });
+
+      /*
+      var msnry = $('.gallery-grid').masonry({
+        // set itemSelector so .grid-sizer is not used in layout
+        itemSelector: '.gallery-item',
+        // use element for option
+        columnWidth: '.grid-sizer',
+        percentPosition: true
+      });
+
+      function onLayout() {
+          alert('done');
+      };
+
+      msnry.on('layoutComplete', onLayout);*/
 
       $('#promo').vegas({
       delay: 8000,
