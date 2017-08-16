@@ -34,7 +34,8 @@
         "./assets/js/imagesloaded.js",
         "./assets/js/jqBootstrapValidation.js",
         "./assets/js/contact.js",
-        "./assets/js/main.js"
+        "./assets/plugins/vegas/vegas.min.js",
+        "./assets/js/main.js"        
       ],
       "environmentSource": "environments/environment.ts",
       "environments": {
