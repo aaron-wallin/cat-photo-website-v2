@@ -7,9 +7,6 @@ import { RouterModule} from '@angular/router';
 import { AppComponent } from './app.component';
 
 import {HeaderComponent} from './header/header.component';
-import {PortfolioComponent} from './portfolio/portfolio.component';
-import {PortfolioMainComponent} from './portfolio/portfolio-main.component';
-import {PortfolioDetailComponent} from './portfolio/portfolio-detail.component';
 import {GalleryComponent} from './portfolio/gallery.component';
 
 import { appRoutes } from './routes';
@@ -18,9 +15,6 @@ import { appRoutes } from './routes';
   declarations: [
     AppComponent,
     HeaderComponent,
-    PortfolioComponent,
-    PortfolioMainComponent,
-    PortfolioDetailComponent,
     GalleryComponent
   ],
   imports: [
