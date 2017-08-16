@@ -1,88 +1,13 @@
-<h2 class="headline" style="text-align: center;">Event Photo Gallery</h2>
-<div class="container-fluid" style="background-image: url('assets/img/banners/03_bg.jpg');">
+<div class="container-fluid" >        
+    <h1 class="homepage-info" style="text-align: center; color: white;">       
+        - {{selectedGallery.title}} -       
+    </h1>
     <div class="gallery-grid">
-        <div class="grid-sizer col-xs-6 col-sm-3"></div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <a href="assets/img/events/01.jpg" data-lightbox="event-set" data-title="a photo">
-                <img class="img-responsive" style="min-height: 20px;" src="assets/img/events/01.jpg">
-            </a>
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <a href="assets/img/events/02.jpg" data-lightbox="event-set" data-title="a photo">
-                <img class="img-responsive" src="assets/img/events/02.jpg">
-            </a>
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/03.jpg">
-        </div>
-
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/04.jpg">
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/05.jpg">
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/06.jpg">
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/07.jpg">
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/08.jpg">
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/09.jpg">
-        </div>
-
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/04.jpg">
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/05.jpg">
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/06.jpg">
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/07.jpg">
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/08.jpg">
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/09.jpg">
-        </div>
-
-        <div class="grid-sizer col-xs-6 col-sm-3">TEST</div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/01.jpg">
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/02.jpg">
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/03.jpg">
-        </div>
-
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/04.jpg">
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/05.jpg">
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/06.jpg">
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/07.jpg">
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/08.jpg">
-        </div>
-        <div class="gallery-item col-xs-6 col-sm-3">
-            <img class="img-responsive" src="assets/img/events/09.jpg">
-        </div>
-
+        <div class="grid-sizer col-xs-12 col-sm-6 col-md-3"></div>
+        <div *ngFor='let i of selectedGallery.imageList' class="gallery-item col-xs-12 col-sm-6 col-md-3">
+                <a href="{{i.imagePath}}" data-lightbox="event-set" data-title="">
+                    <img class="img-responsive" style="min-height: 20px;" src="{{i.imagePath}}">
+                </a>
+        </div>       
     </div>
 </div>
