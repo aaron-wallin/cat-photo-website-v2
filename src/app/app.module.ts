@@ -15,7 +15,7 @@ import { appRoutes } from './routes';
   declarations: [
     AppComponent,
     HeaderComponent,
-    GalleryComponent
+    GalleryComponent,
   ],
   imports: [
     BrowserModule,

@@ -9,6 +9,42 @@ function main() {
   (function () {
     'use strict';
 
+    var $galleryGrid;
+
+    $(function () {
+      $('.gallery-link').click(
+        function () {
+          console.log('clicked 2');
+
+          $galleryGrid.masonry('destroy');
+
+          $galleryGrid = null;
+
+          if (!$galleryGrid) {
+            $galleryGrid = $('.gallery-grid').masonry({
+              itemSelector: '.gallery-item',
+              columnWidth: '.gallery-sizer',
+              percentPosition: true
+            });
+
+            $galleryGrid.imagesLoaded().progress(function () {
+              console.log('image layout 3');
+              $galleryGrid.masonry('layout');
+            });
+
+            $galleryGrid.masonry('layout');
+          }
+
+          //$galleryGrid.imagesLoaded().progress(function () {
+          //  console.log('image layout 2');
+          //  $galleryGrid.masonry('layout');
+          //});
+
+          //$galleryGrid.masonry('layout');
+        }
+      );
+    });
+
     //Page Loader
     //<![CDATA[
     $(window).load(function () { // makes sure the whole site is loaded
@@ -16,13 +52,16 @@ function main() {
       $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
       $('body').delay(350).css({ 'overflow': 'visible' });
 
-      var msnry = $('.gallery-grid').masonry({
-        // set itemSelector so .grid-sizer is not used in layout
+      $galleryGrid = $('.gallery-grid').masonry({
         itemSelector: '.gallery-item',
-        // use element for option
-        columnWidth: '.grid-sizer',
+        columnWidth: '.gallery-sizer',
         percentPosition: true
       });
+
+      $galleryGrid.imagesLoaded().progress(function () {
+        console.log('image layout');
+        $galleryGrid.masonry('layout');
+      });      
     });
     //]]>
 
@@ -32,35 +71,19 @@ function main() {
         $("#contact").slideToggle("slow,swing");
       });
 
-      /*
-      var msnry = $('.gallery-grid').masonry({
-        // set itemSelector so .grid-sizer is not used in layout
-        itemSelector: '.gallery-item',
-        // use element for option
-        columnWidth: '.grid-sizer',
-        percentPosition: true
-      });
-
-      function onLayout() {
-          alert('done');
-      };
-
-      msnry.on('layoutComplete', onLayout);*/
-
       $('#promo').vegas({
-      delay: 8000,
-      /*overlay: 'assets/plugins/vegas/overlays/06.png',*/
-      color: '#101113',
-      transition: 'zoomOut',
-      transitionDuration: 3000,
-      slides: [
-        { src: 'assets/img/banners/01_bg.jpg' },
-        { src: 'assets/img/banners/02_bg.jpg' },
-        { src: 'assets/img/banners/03_bg.jpg' },
-        { src: 'assets/img/banners/04_bg.jpg' }
-      ]
-    });
-
+        delay: 8000,
+        /*overlay: 'assets/plugins/vegas/overlays/06.png',*/
+        color: '#101113',
+        transition: 'zoomOut',
+        transitionDuration: 3000,
+        slides: [
+          { src: 'assets/img/banners/01_bg.jpg' },
+          { src: 'assets/img/banners/02_bg.jpg' },
+          { src: 'assets/img/banners/03_bg.jpg' },
+          { src: 'assets/img/banners/04_bg.jpg' }
+        ]
+      });
 
     });
 
@@ -98,7 +121,7 @@ function main() {
       $(this).find('iframe').attr('src', src);
     });
 
-    
+
   }());
 
 }

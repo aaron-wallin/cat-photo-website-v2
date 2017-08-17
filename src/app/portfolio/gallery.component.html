@@ -1,13 +1,26 @@
-<div class="container-fluid" >        
-    <h1 class="homepage-info" style="text-align: center; color: white;">       
-        - {{selectedGallery.title}} -       
-    </h1>
-    <div class="gallery-grid">
-        <div class="grid-sizer col-xs-12 col-sm-6 col-md-3"></div>
-        <div *ngFor='let i of selectedGallery.imageList' class="gallery-item col-xs-12 col-sm-6 col-md-3">
-                <a href="{{i.imagePath}}" data-lightbox="event-set" data-title="">
-                    <img class="img-responsive" style="min-height: 20px;" src="{{i.imagePath}}">
-                </a>
-        </div>       
+<div class="container-fluid" style="margin-left:75px; margin-right:75px;">
+
+    <div class="text-center">
+        <h2 style="letter-spacing: -1px;">Catherine Wallin</h2>
+        <!--<div class="tagline">Photographer based in southern California</div>-->
+        <!--<img src="assets/img/D750_front.png" style="width: 50px;">-->
     </div>
+
+    <nav class="navbar navbar-default" style="background:black;">
+        <ul class="nav navbar-nav">            
+            <li><a href="http://www.catwallin.net">Home</a></li>
+            <li><a class="gallery-link" [routerLink]="[ '/gallery/0' ]">Events</a></li>
+            <li><a class="gallery-link" [routerLink]="[ '/gallery/1' ]">Portraits</a></li>            
+        </ul>
+    </nav>
+
+    <div class="gallery-grid">
+        <div class="gallery-sizer col-xs-12 col-sm-6 col-md-3"></div>
+        <div *ngFor='let i of selectedGallery.imageList' class="gallery-item col-xs-12 col-sm-6 col-md-3">
+            <a href="{{i.imagePath}}" data-lightbox="event-set" data-title="">
+                <img class="img-responsive" style="min-height: 20px;" src="{{i.imagePath}}">
+            </a>
+        </div>
+    </div>
+
 </div>
