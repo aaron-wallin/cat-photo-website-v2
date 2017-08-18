@@ -72,11 +72,11 @@ function main() {
       });
 
       $('#promo').vegas({
-        delay: 8000,
+        delay: 5000,
         /*overlay: 'assets/plugins/vegas/overlays/06.png',*/
         color: '#101113',
         transition: 'zoomOut',
-        transitionDuration: 3000,
+        transitionDuration: 1500,
         slides: [
           { src: 'assets/img/banners/01_bg.jpg' },
           { src: 'assets/img/banners/02_bg.jpg' },
