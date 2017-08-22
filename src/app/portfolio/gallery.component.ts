@@ -59,6 +59,12 @@ export class GalleryComponent implements OnInit {
         { imagePath: 'assets/img/before-after/07.jpg' },
         { imagePath: 'assets/img/before-after/08.jpg' },
         { imagePath: 'assets/img/before-after/09.jpg' },
+        { imagePath: 'assets/img/before-after/10.jpg' },
+        { imagePath: 'assets/img/before-after/11.jpg' },
+        { imagePath: 'assets/img/before-after/12.jpg' },
+        { imagePath: 'assets/img/before-after/13.jpg' },
+        { imagePath: 'assets/img/before-after/14.jpg' },
+        { imagePath: 'assets/img/before-after/15.jpg' },
       ]
     },
     {      
